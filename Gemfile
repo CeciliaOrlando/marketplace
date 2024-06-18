@@ -74,3 +74,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+# gemas del proyecto
+gem "devise"
