@@ -76,3 +76,4 @@ group :test do
 end
 # gemas del proyecto
 gem "devise"
+gem "cloudinary"
