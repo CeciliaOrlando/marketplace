@@ -1,2 +1,7 @@
-<h1>Courses#show</h1>
-<p>Find me in app/views/courses/show.html.erb</p>
+<h1><%= @course.name %></h1>
+<p><%= @course.description %></p>
+<p><%= @course.price %></p>
+
+<%= link_to "Back", courses_path %>
+<%= link_to "Edit", edit_course_path(@course.id) %>
+<%= link_to "Delete", course_path(@course.id), method: :delete, data: { confirm: "Are you sure?" } %>
