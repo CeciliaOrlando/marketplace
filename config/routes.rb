@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   resources :courses, only: [:show, :edit, :update, :destroy] do
     resources :reservations, only: [:new, :create]
   end
-  resources :reservations, only: [:show, :edit, :update, :destroy]
+  resources :reservations, only: [:index, :show, :edit, :update, :destroy]
 end
