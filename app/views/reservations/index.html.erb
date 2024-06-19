@@ -1,0 +1,15 @@
+<h1>My Reservations</h1>
+<ul>
+
+<% @reservations.each do |reservation| %>
+<li>
+<%= reservation.course.name%>
+<%= reservation.course.price%>
+<%= reservation.course.academy.name%>
+<%= reservation.course.academy.address%>
+
+
+</li>
+<%end%>
+<%#= link_to "New User", user_path %>
+</ul>

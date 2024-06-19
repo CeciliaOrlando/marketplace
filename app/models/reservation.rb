@@ -4,6 +4,6 @@ class Reservation < ApplicationRecord
   belongs_to :user
 
   #Validations
-  validates :user_id, :academy_id, :course_id, uniqueness
-  validates :user_id, :academy_id, :course_id, presence: true
+  validates :user_id, :course_id, uniqueness: true
+  validates :user_id, :course_id, presence: true
 end
