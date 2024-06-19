@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://molchanovs.com/cdn/shop/articles/Molchanovs_Freediving_-_What_is_Freediving_by_Alexey_Molchanov.jpg?v=1603086438&width=1080);">
+  <div class="container">
+    <h1>Tu <strong>mejor</strong> proxima <strong>aventura!</strong>!</h1>
+    <p>Muchas academias, miles de cursos!</p>
+    <a class="btn btn-primary" href="#">Reserva ahora</a>
+  </div>
+</div>
+
+<%# cards %>
+
+<% @academies.each do |academy|%>
+  <p><%= academy.name %></p>
+  <p><%= academy.address %></p>
+  <p><%= academy.rating %></p>
+  <p><%= academy.review %></p>
+<% end %>
+
+<%# footer %>
+<br><br>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <i class="fas fa-heart"></i> diving
+  </div>
+</div>
