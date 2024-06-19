@@ -15,33 +15,33 @@ user1.save!
 
 user2 = User.create!(email: "sofia@gmail.com", password: "123456")
 file = URI.open("https://avatars.githubusercontent.com/u/168951353?v=4")
-user1.photo.attach(io: file, filename: "sofia.png", content_type: "image/png")
-user1.save!
+user2.photo.attach(io: file, filename: "sofia.png", content_type: "image/png")
+user2.save!
 
 user3 = User.create!(email: "david@gmail.com", password: "123456")
 file = URI.open("https://avatars.githubusercontent.com/u/119614171?v=4")
-user1.photo.attach(io: file, filename: "david.png", content_type: "image/png")
-user1.save!
+user3.photo.attach(io: file, filename: "david.png", content_type: "image/png")
+user3.save!
 
 user4 = User.create!(email: "alejandra@gmail.com", password: "123456")
 file = URI.open("https://avatars.githubusercontent.com/u/159148776?v=4")
-user1.photo.attach(io: file, filename: "aleja.png", content_type: "image/png")
-user1.save!
+user4.photo.attach(io: file, filename: "aleja.png", content_type: "image/png")
+user4.save!
 
 # Crear academias
 
 puts "creando academias"
-academy1 = Academy.new(name: "Academia de buceo 1", address: "Calle 1 # 1-1", user: user1)
+academy1 = Academy.new(name: "Academia de buceo 1", address: "Calle 1 # 1-1", user: user1, rating: 5, review: "Excelente academia de buceo")
 file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyBZAFe7F8Yt33xrIvIprLDcVsR30AkO5rw&s")
 academy1.photo.attach(io: file, filename: "buceo01.png", content_type: "image/png")
 academy1.save!
 
-academy2 = Academy.new(name: "Academia de buceo 2", address: "Calle 2 # 2-2", user: user2)
+academy2 = Academy.new(name: "Academia de buceo 2", address: "Calle 2 # 2-2", user: user2, rating: 4, review: "Buena academia de buceo")
 file = URI.open("https://arenaldiving.com/wp-content/uploads/2022/04/SCUBA-DIVING-FOR-BEGINNERS.jpg")
 academy2.photo.attach(io: file, filename: "buceo02.png", content_type: "image/png")
 academy2.save!
 
-academy3 = Academy.new(name: "Academia de buceo 3", address: "Calle 3 # 3-3", user: user3)
+academy3 = Academy.new(name: "Academia de buceo 3", address: "Calle 3 # 3-3", user: user3, rating: 3, review: "Regular academia de buceo")
 file = URI.open("https://photo620x400.mnstatic.com/530751ddb402f10b2e46ed78a26efcf4/escuela-de-buceo.jpg")
 academy3.photo.attach(io: file, filename: "buceo03.png", content_type: "image/png")
 academy3.save!
