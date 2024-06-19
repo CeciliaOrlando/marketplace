@@ -8,12 +8,23 @@
 
 <%# cards %>
 
-<% @academies.each do |academy|%>
-  <p><%= academy.name %></p>
-  <p><%= academy.address %></p>
-  <p><%= academy.rating %></p>
-  <p><%= academy.review %></p>
-<% end %>
+<div class="container">
+ <div class="row">
+  <% @academies.each do |academy|%>
+   <div class="col-md-4">
+    <div class="card shadow border p-3">
+     <div class="card-body">
+      <p><%= academy.phot %></p>
+      <p><%= academy.name %></p>
+      <p><%= academy.address %></p>
+      <p><%= academy.rating %></p>
+      <p><%= academy.review %></p>
+     </div>
+    </div>
+   </div>
+  <% end %>
+ </div>
+</div>
 
 <%# footer %>
 <br><br>
