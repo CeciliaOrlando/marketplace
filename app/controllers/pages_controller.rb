@@ -8,4 +8,5 @@ class PagesController < ApplicationController
   def dashboard
     @academies = current_user.academies
   end
+  
 end

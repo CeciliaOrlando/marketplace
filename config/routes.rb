@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :academies do
     resources :courses, only: [:new, :create]
   end
-  resources :courses, only: [:show, :edit, :update, :destroy] do
+  resources :courses, only: [:index, :show, :edit, :update, :destroy] do
     resources :reservations, only: [:new, :create]
   end
   resources :reservations, only: [:index, :show, :edit, :update, :destroy]
