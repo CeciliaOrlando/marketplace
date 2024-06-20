@@ -1,0 +1,8 @@
+<p>Nombre: <%= @academy.name %></p>
+<p>Dirección: <%= @academy.address %></p>
+<p>Rating: <%= @academy.rating %></p>
+<p>Review: <%= @academy.review %></p>
+
+<%= link_to 'Editar', edit_academy_path(@academy) %>
+<%= link_to 'Eliminar', academy_path(@academy), method: :delete, data: { confirm: '¿Estás seguro?' } %>
+<%= link_to 'Atrás', academies_path %>

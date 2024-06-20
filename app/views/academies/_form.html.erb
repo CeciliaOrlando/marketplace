@@ -1,0 +1,10 @@
+<%= simple_form_for academy do |f| %>
+  <%= f.input :name, label: 'Nombre' %>
+  <%= f.input :address, label: 'Dirección' %>
+  <%= f.input :rating, label: 'Rating' %>
+  <%= f.input :review, label: 'Review' %>
+  <%= f.button :submit %>
+<% end %>
+
+  <%# Esto se utilizará tanto en la vista de creacion
+  como en la de edicion para mostrar formulario de la academia %>

@@ -118,10 +118,10 @@ course12.save!
 # reservas
 
 puts "creando reservas"
-reservation1 = Reservation.create!(user: user1, course: course1, reservation_date: Date.today, price: course1.price)
+Reservation.create!(user: user1, course: course1, reservation_date: Date.today, price: course1.price)
 
-reservation2 = Reservation.create!(user: user1, course: course2, reservation_date: Date.today, price: course2.price)
+Reservation.create!(user: user1, course: course2, reservation_date: Date.today, price: course2.price)
 
-reservation3 = Reservation.create!(user: user1, course: course4, reservation_date: Date.today, price: course4.price)
+Reservation.create!(user: user1, course: course4, reservation_date: Date.today, price: course4.price)
 
-reservation4 = Reservation.create!(user: user2, course: course5, reservation_date: Date.today, price: course5.price)
+Reservation.create!(user: user2, course: course5, reservation_date: Date.today, price: course5.price)

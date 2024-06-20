@@ -1,0 +1,9 @@
+<h1>Editar Academia</h1>
+
+<%= simple_form_for @academy do |f| %>
+  <%= f.input :name, label: 'name' %>
+  <%= f.input :address, label: 'address' %>
+  <%= f.button :submit, 'Actualizar Academia' %>
+<% end %>
+
+<%= link_to 'Atrás', academies_path %>
