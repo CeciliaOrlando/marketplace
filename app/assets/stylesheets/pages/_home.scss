@@ -69,7 +69,6 @@
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
-  background-filter: brightness(70%);
   box-shadow: 0 1px 1px rgba(0,0,0,0.1),
     0 2px 2px rgba(0,0,0,0.1),
     0 4px 4px rgba(0,0,0,0.1),
@@ -77,6 +76,9 @@
     0 16px 16px rgba(0,0,0,0.1);
 }
 
+.image {
+  filter: brightness(50%);
+  }
 .card_transition:before {
   content: '';
   position: absolute;
@@ -170,6 +172,7 @@
     outline: 1px dashed yellow;
     outline-offset: 3px;
   }
+
 }
 .btn-primary {
   background-color: #264653;

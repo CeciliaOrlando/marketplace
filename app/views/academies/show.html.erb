@@ -5,4 +5,17 @@
 
 <%= link_to 'Editar', edit_academy_path(@academy) %>
 <%= link_to 'Eliminar', academy_path(@academy), method: :delete, data: { confirm: '¿Estás seguro?' } %>
+
+<% @academy.courses.each do |course| %>
+  <%= link_to course_path(course) do %>
+    <h1>Curso</h1>
+  <% end %>
+<% end %>
+
+<% if current_user == @academy.user  %>
+  <%= link_to 'Nuevo Curso', new_academy_course_path(@academy) %>
+  <%= link_to 'Editar', edit_academy_path(@academy) %>
+  <%= link_to 'Eliminar', academy_path(@academy), method: :delete, data: { confirm: '¿Estás seguro?' } %>
+<% end %>
+
 <%= link_to 'Atrás', academies_path %>

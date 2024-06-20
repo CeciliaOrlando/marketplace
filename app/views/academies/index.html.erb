@@ -11,3 +11,19 @@
     </li>
   <% end %>
 </ul>
+
+<% @academies.each do |academy|%>
+
+      <div class="col-md-4">
+        <div class="card_transition shadow border p-3" style="background-image: url('<%= url_for(academy.photo) %>'); background-size: cover; background-position: center;">
+          <div class="content d-flex flex-column">
+            <h2 class="title"><%= academy.name %></h2>
+              <%= link_to "View Details", academy_path(academy), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+
+  <%= link_to 'Añadir Nueva Academia', new_academy_path, class: "btn btn-primary" %>
+

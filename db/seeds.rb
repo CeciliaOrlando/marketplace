@@ -31,17 +31,17 @@ user4.save!
 # Crear academias
 
 puts "creando academias"
-academy1 = Academy.new(name: "Academia de buceo 1", address: "Calle 1 # 1-1", user: user1, rating: 5, review: "Excelente academia de buceo")
+academy1 = Academy.new(name: "Academias para niños", address: "Calle 1 # 1-1", user: user1, rating: 5, review: "Excelente academia de buceo")
 file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyBZAFe7F8Yt33xrIvIprLDcVsR30AkO5rw&s")
 academy1.photo.attach(io: file, filename: "buceo01.png", content_type: "image/png")
 academy1.save!
 
-academy2 = Academy.new(name: "Academia de buceo 2", address: "Calle 2 # 2-2", user: user2, rating: 4, review: "Buena academia de buceo")
+academy2 = Academy.new(name: "Academias para adultos", address: "Calle 2 # 2-2", user: user2, rating: 4, review: "Buena academia de buceo")
 file = URI.open("https://arenaldiving.com/wp-content/uploads/2022/04/SCUBA-DIVING-FOR-BEGINNERS.jpg")
 academy2.photo.attach(io: file, filename: "buceo02.png", content_type: "image/png")
 academy2.save!
 
-academy3 = Academy.new(name: "Academia de buceo 3", address: "Calle 3 # 3-3", user: user3, rating: 3, review: "Regular academia de buceo")
+academy3 = Academy.new(name: "Buzos profesionales", address: "Calle 3 # 3-3", user: user3, rating: 3, review: "Regular academia de buceo")
 file = URI.open("https://photo620x400.mnstatic.com/530751ddb402f10b2e46ed78a26efcf4/escuela-de-buceo.jpg")
 academy3.photo.attach(io: file, filename: "buceo03.png", content_type: "image/png")
 academy3.save!
