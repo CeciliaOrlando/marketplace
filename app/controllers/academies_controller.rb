@@ -4,6 +4,7 @@ class AcademiesController < ApplicationController
   # por convencion esta accion responde a la ruta /academies y es la encargada de mostrar la lista de academias
   # localhost:3000/academies
   def index
+    @academies = Academy.all # el @academies es un array de instancias de Academy
   end
 
   # localhotst:3000/academies/1
@@ -19,10 +20,11 @@ class AcademiesController < ApplicationController
   # localhost:3000/academies
   def create
     @academy = Academy.new(academy_params)
+    @academy.user = current_user # esto es para que la academia creada se asocie con el usuario que la creo
     if @academy.save
       redirect_to @academy
     else
-      render :new
+      render :new, status: :unprocessable_entity # si no se pudo guardar la academia, renderiza(vuelve a mostrarlo) el formulario de nuevo
     end
   end
 
