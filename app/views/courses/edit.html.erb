@@ -1,2 +1,10 @@
-<h1>Courses#edit</h1>
-<p>Find me in app/views/courses/edit.html.erb</p>
+<h1>Editar Curso</h1>
+
+<%= simple_form_for @academy do |f| %>
+  <%= f.input :name, label: 'Nombre' %>
+  <%= f.input :address, label: 'Descripcin' %>
+  <%= f.input :price, label: 'Precio' %>
+  <%= f.button :submit, 'Actualizar Curso' %>
+<% end %>
+
+<%= link_to 'Atrás', courses_path %>
