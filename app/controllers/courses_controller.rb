@@ -7,6 +7,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @reservation = Reservation.new
     @reservations = @course.reservations
   end
 
