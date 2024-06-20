@@ -49,7 +49,7 @@ academy3.save!
 # cursos academia 1
 
 puts "creando cursos academia 1"
-course1 = Course.new(name: "Curso de buceo 1", description: "Curso de buceo para niños", price: 100, academy: academy1)
+course1 = Course.new(name: "Curso de buceo 1", description: "Curso de buceo para niños de 2-6 años con un programa de aprendizaje personalizado.", price: 100, academy: academy1)
 file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyBZAFe7F8Yt33xrIvIprLDcVsR30AkO5rw&s")
 course1.photos.attach(io: file, filename: "niños_01.png", content_type: "image/png")
 course1.save!
@@ -95,7 +95,7 @@ course8.save!
 # cursos academia 3
 
 puts "creando cursos academia 3"
-course9 = Course.new(name: "Curso de buceo 1", description: "Curso de buceo para adultos 1", price: 100, academy: academy3)
+course9 = Course.new(name: "Curso de buceo para Niños", description: "Curso de buceo para adultos 1", price: 100, academy: academy3)
 file = URI.open("https://photo620x400.mnstatic.com/530751ddb402f10b2e46ed78a26efcf4/escuela-de-buceo.jpg")
 course9.photos.attach(io: file, filename: "todos_01.png", content_type: "image/png")
 course9.save!

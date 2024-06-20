@@ -1,15 +1,21 @@
+<div class="d-flex justify-content-center align-items-center">
+  <div class="card card-width container mt-4">
 <h1>My Reservations</h1>
+
 <ul>
-
 <% @reservations.each do |reservation| %>
-<li>
-<%= reservation.course.name%>
-<%= reservation.course.price%>
-<%= reservation.course.academy.name%>
-<%= reservation.course.academy.address%>
-
-
-</li>
-<%end%>
-<%#= link_to "New User", user_path %>
+  <li>
+  <%= reservation.course.name%>
+  <%= reservation.course.academy.name%>
+  <%= reservation.course.academy.address%>
+  <%= reservation.course.price %>
+  <%end%>
 </ul>
+<div class="row">
+<div class="col-8"></div>
+  <div class="col-4">
+    <%= link_to "Back to courses", courses_path, class: "btn btn-dark btn-sm text-decoration-none" %>
+  </div>
+</div>
+</div>
+</div>
