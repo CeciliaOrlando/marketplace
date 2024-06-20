@@ -8,23 +8,23 @@
 
 <%# cards %>
 
-<div class="container">
- <div class="row">
-  <% @academies.each do |academy|%>
-   <div class="col-md-4">
-    <div class="card shadow border p-3">
-     <div class="card-body">
-      <p><%= academy.phot %></p>
-      <p><%= academy.name %></p>
-      <p><%= academy.address %></p>
-      <p><%= academy.rating %></p>
-      <p><%= academy.review %></p>
-     </div>
-    </div>
-   </div>
-  <% end %>
- </div>
+<div class="container mt-5">
+  <div class="row">
+    <% @academies.each do |academy|%>
+      <div class="col-md-4">
+        <div class="card shadow border p-3" style="background-image: url('<%= url_for(academy.photo) %>'); background-size: cover; background-position: center;">
+          <div class="content d-flex flex-column">
+            <h2 class="title"><%= academy.name %></h2>
+            <h3 class="address"><%= academy.address %></h3>
+            <p class="rating"><%= academy.rating %></p>
+            <button class="btn btn-primary">View Details</button>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
 
 <%# footer %>
 <br><br>
