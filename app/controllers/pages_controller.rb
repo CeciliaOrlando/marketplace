@@ -7,6 +7,11 @@ class PagesController < ApplicationController
 
   def dashboard
     @academies = current_user.academies
+    @courses = []
+    current_user.academies.each do |academy|
+      academy.courses.each do |course|
+        @courses << course
+      end
+    end
   end
-  
 end
