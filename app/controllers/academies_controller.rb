@@ -46,6 +46,8 @@ class AcademiesController < ApplicationController
   # localhost:3000/academies/1
   def destroy
     @academy = Academy.find(params[:id])
+    @academy.destroy
+    redirect_to academies_path, notice: 'Academia eliminada con éxito.'
   end
 
 
