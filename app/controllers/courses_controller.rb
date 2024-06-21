@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
+    return @courses.order(created_at: :desc)
   end
 
   def show

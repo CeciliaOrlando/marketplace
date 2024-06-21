@@ -14,7 +14,7 @@
 
 <% @academy.courses.each do |course| %>
   <%= link_to course_path(course) do %>
-    <h1>Curso</h1>
+    <h1><%= course.name %></h1>
   <% end %>
 <% end %>
 
