@@ -1,21 +1,32 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="card card-width container mt-4">
 <h1>My Reservations</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>My Courses</th>
+          <th>My Academies</th>
+          <th>Academy Address</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reservations.each do |reservation| %>
+          <tr>
+            <td><%= reservation.course.name %></td>
+            <td><%= reservation.course.academy.name %></td>
+            <td><%= reservation.course.academy.address %></td>
+            <td><%= reservation.course.price %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<ul>
-<% @reservations.each do |reservation| %>
-  <li>
-  <%= reservation.course.name%>
-  <%= reservation.course.academy.name%>
-  <%= reservation.course.academy.address%>
-  <%= reservation.course.price %>
-  <%end%>
-</ul>
-<div class="row">
-<div class="col-8"></div>
-  <div class="col-4">
-    <%= link_to "Back to courses", courses_path, class: "btn btn-dark btn-sm text-decoration-none" %>
-  </div>
+    <div class="row">
+      <div class="col-8"></div>
+      <div class="col-4">
+        <%= link_to "Back to courses", courses_path, class: "btn btn-dark btn-sm text-decoration-none" %>
+    </div>
 </div>
 </div>
 </div>
