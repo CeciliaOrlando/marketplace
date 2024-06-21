@@ -1,7 +1,13 @@
-<p>Nombre: <%= @academy.name %></p>
-<p>Dirección: <%= @academy.address %></p>
-<p>Rating: <%= @academy.rating %></p>
-<p>Review: <%= @academy.review %></p>
+<%# banner %>
+    <div class= "row">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://molchanovs.com/cdn/shop/articles/Molchanovs_Freediving_-_What_is_Freediving_by_Alexey_Molchanov.jpg?v=1603086438&width=1080);">
+  <div class="container">
+    <h1><%= @academy.name%> </h1>
+    <h2><%= @academy.address %></h2>
+    <h3><%= @academy.rating %></h3>
+    <h4><%= @academy.review %></h4>
+   </div>
+</div>
 
 <%= link_to 'Editar', edit_academy_path(@academy) %>
 <%= link_to 'Eliminar', academy_path(@academy), method: :delete, data: { confirm: '¿Estás seguro?' } %>
@@ -18,4 +24,19 @@
   <%= link_to 'Eliminar', academy_path(@academy), method: :delete, data: { confirm: '¿Estás seguro?' } %>
 <% end %>
 
-<%= link_to 'Atrás', academies_path %>
+<%= link_to 'Atrás', academies_path, class: "btn btn-gradient mt-5"%>
+
+<%# footer %>
+<br><br>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <i class="fas fa-heart"></i> diving
+  </div>
+</div>
