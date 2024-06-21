@@ -20,7 +20,6 @@
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if current_user.photo.present?%>
-              <p>hola</p>
               <%= image_tag current_user.photo, class: "avatar", alt: "dropdown menu" %>
             <% else %>
               <% image_tag "buzo.png", class: "avatar" %>
