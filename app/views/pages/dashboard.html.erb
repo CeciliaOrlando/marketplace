@@ -1,4 +1,45 @@
-<h1>My Courses</h1>
-<% @courses.each do |course| %>
-<%= course.name %>
-<% end %>
+<div class="viewport">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <header>
+      <a href="#">DivingHub</a>
+    </header>
+    <ul class="nav">
+     <li>
+        <a href="#">
+
+          <i class="fa-solid fa-house"></i> Mi academia</a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-pencil"></i> Mis cursos</a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-regular fa-calendar"></i> Mis reservas </a>
+      </li>
+     </ul>
+  </div>
+  <!-- Content -->
+  <div class="content_dash">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <h1>My courses</h1>
+      <% @courses.each do |course| %>
+      <%= course.name %>
+      <% end %>
+        <%# Make sure to keep all page content within the
+        <code>#content</code>. %>
+
+    </div>
+  </div>
+</div>
