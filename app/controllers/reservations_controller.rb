@@ -14,11 +14,15 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    @course = Course.find(params[:course_id])
     @reservation = Reservation.new(reservation_params)
+    @reservation.user = current_user
+    @reservation.course = @course
+    @reservation.price = @course.price
     if @reservation.save
-      redirect_to @reservation
+      redirect_to reservations_path
     else
-      render 'new'
+      render 'new', status: :unprocessable_entity
     end
   end
 
@@ -44,6 +48,6 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:course_id, :user_id, :reserved_at)
+    params.require(:reservation).permit(:reservation_date)
   end
 end

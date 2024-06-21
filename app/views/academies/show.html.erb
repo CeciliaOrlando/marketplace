@@ -9,7 +9,8 @@
    </div>
 </div>
 
-
+<%= link_to 'Editar', edit_academy_path(@academy) %>
+<%= link_to 'Eliminar', academy_path(@academy), method: :delete, data: { confirm: '¿Estás seguro?' } %>
 
 <% @academy.courses.each do |course| %>
   <%= link_to course_path(course) do %>
