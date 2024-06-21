@@ -1,8 +1,7 @@
 <h1>Editar Curso</h1>
 
-<%= simple_form_for @academy do |f| %>
+<%= simple_form_for @course do |f| %>
   <%= f.input :name, label: 'Nombre' %>
-  <%= f.input :address, label: 'Descripcin' %>
   <%= f.input :price, label: 'Precio' %>
   <%= f.button :submit, 'Actualizar Curso' %>
 <% end %>
