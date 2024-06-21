@@ -1,27 +1,26 @@
-<div class="viewport">
+<div class="viewport" data-controller="dashboard">
   <!-- Sidebar -->
   <div class="sidebar">
     <header>
       <a href="#">DivingHub</a>
     </header>
     <ul class="nav">
-     <li>
-        <a href="#">
-
+      <li>
+        <a href="#" data-action="click->dashboard#displayAcademy">
           <i class="fa-solid fa-house"></i> Mi academia</a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" data-action="click->dashboard#displayCourses">
           <i class="fa-solid fa-pencil"></i> Mis cursos</a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" data-action="click->dashboard#displayReservations">
           <i class="fa-regular fa-calendar"></i> Mis reservas </a>
       </li>
-     </ul>
+    </ul>
   </div>
   <!-- Content -->
-  <div class="content_dash">
+  <div class="content_dash" data-dashboard-target="content">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
@@ -33,13 +32,32 @@
       </div>
     </nav>
     <div class="container-fluid">
-      <h1>My courses</h1>
-      <% @courses.each do |course| %>
-      <%= course.name %>
-      <% end %>
-        <%# Make sure to keep all page content within the
-        <code>#content</code>. %>
-
+      <div id="academies-section" data-dashboard-target="academies">
+        <h1>My Academies</h1>
+        <% @academies.each do |academy| %>
+          <div>
+            <h2><%= academy.name %></h2>
+          </div>
+        <% end %>
+      </div>
+      <div id="courses-section" data-dashboard-target="courses">
+        <h1>My Courses</h1>
+        <% @courses.each do |course| %>
+          <div>
+            <h2><%= course.name %></h2>
+            <p><%= course.description %></p>
+          </div>
+        <% end %>
+      </div>
+      <div id="reservations-section" data-dashboard-target="reservations">
+        <h1>My Reservations</h1>
+        <% @reservations.each do |reservation| %>
+          <div>
+            <h2><%= reservation.course.name %></h2>
+            <p><%= reservation.reservation_date %></p>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

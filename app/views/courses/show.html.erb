@@ -65,12 +65,9 @@
         </div>
     </div>
 
-<%= link_to("Atrás", :back) %>
-<%= link_to "Ver todos los cursos", courses_path %>
+    <div class="container w-25 mt-3">
+    <div class="row">
+         <%= link_to "Atrás", :back, class: "btn btn-gradient mb-3" %>
+    </div>
 
-<% if user_signed_in? %>
-  <% if current_user.academies.include?(@course.academy) %>
-    <%= link_to "Edit", edit_course_path(@course.id) %>
-    <%= link_to "Delete", course_path(@course.id), method: :delete, data: { confirm: "Are you sure?" } %>
-  <% end %>
-<% end %>
+</div>

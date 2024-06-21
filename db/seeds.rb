@@ -41,7 +41,7 @@ file = URI.open("https://arenaldiving.com/wp-content/uploads/2022/04/SCUBA-DIVIN
 academy2.photo.attach(io: file, filename: "buceo02.png", content_type: "image/png")
 academy2.save!
 
-academy3 = Academy.new(name: "Buzos profesionales", address: "Calle 3 # 3-3", user: user3, rating: 3, review: "Regular academia de buceo")
+academy3 = Academy.new(name: "Buzos profesionales", address: "Calle 3 # 3-3", user: user1, rating: 3, review: "Regular academia de buceo")
 file = URI.open("https://photo620x400.mnstatic.com/530751ddb402f10b2e46ed78a26efcf4/escuela-de-buceo.jpg")
 academy3.photo.attach(io: file, filename: "buceo03.png", content_type: "image/png")
 academy3.save!
@@ -72,7 +72,7 @@ course4.save!
 # cursos academia 2
 
 puts "creando cursos academia 2"
-course5 = Course.new(name: "Curso de buceo 1", description: "Curso de buceo para todos", price: 100, academy: academy2)
+course5 = Course.new(name: "Curso de buceo 1", description: "Sumérgete en una experiencia única y aprende las habilidades esenciales para explorar el océano de manera segura y emocionante", price: 100, academy: academy2)
 file = URI.open("https://arenaldiving.com/wp-content/uploads/2022/04/SCUBA-DIVING-FOR-BEGINNERS.jpg")
 course5.photos.attach(io: file, filename: "todos_01.png", content_type: "image/png")
 course5.save!
@@ -95,7 +95,7 @@ course8.save!
 # cursos academia 3
 
 puts "creando cursos academia 3"
-course9 = Course.new(name: "Curso de buceo para Niños", description: "Curso de buceo para adultos 1", price: 100, academy: academy3)
+course9 = Course.new(name: "Curso de buceo 1 ", description: "Sumérgete en una experiencia única y aprende las habilidades esenciales para explorar el océano de manera segura y emocionante", price: 100, academy: academy3)
 file = URI.open("https://photo620x400.mnstatic.com/530751ddb402f10b2e46ed78a26efcf4/escuela-de-buceo.jpg")
 course9.photos.attach(io: file, filename: "todos_01.png", content_type: "image/png")
 course9.save!

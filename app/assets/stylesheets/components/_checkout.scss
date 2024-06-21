@@ -3,11 +3,22 @@
   font-size: 12px;
   line-height: 1.5;
   width: 150px;
+   &:hover {
+     background-color: black;
+   }
 }
 .card-checkout-body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 400px;
+  height: auto;
+  background-color: lightgray;
+  transition: 0.2 sec;
+  border: none;
+  &:hover {
+    background-color: white;
+  }
 }
 .card-title {
   font-weight: bold;
