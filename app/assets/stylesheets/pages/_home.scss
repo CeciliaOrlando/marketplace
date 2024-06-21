@@ -220,4 +220,29 @@
       transition-duration: 0s;
     }
   }
-}
+
+
+  }
+
+  .btn-gradient {
+    color: white; /* Color del texto */
+    padding: 6px 16px; /* Relleno interno del botón ajustado */
+    border-radius: 4px; /* Radio de borde para hacer esquinas redondeadas */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    background: linear-gradient(#167FFB, #0F60C4); /* Fondo con un gradiente lineal */
+    transition: background 0.3s ease; /* Transición suave para el cambio de fondo */
+    border: 1px solid #0F60C4; /* Borde del botón */
+    display: inline-block; /* Mostrar como bloque en línea */
+    text-align: center; /* Alinear texto al centro */
+    cursor: pointer; /* Cambiar cursor a mano al pasar sobre el botón */
+    font-size: 12px; /* Tamaño de la fuente del texto */
+    line-height: 1.5; /* Altura de línea para asegurar el espacio entre líneas */
+    max-width: 200px; /* Ancho máximo del botón */
+    margin: 0 auto; /* Margen automático para centrarlo horizontalmente */
+    gap: 80px; /* Espacio entre la imagen y el botón */
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(#147EFF, #0F67DA); /* Cambio de fondo al pasar el ratón por encima */
+    color: white; /* Cambio de color del texto al pasar el ratón por encima */
+  }
