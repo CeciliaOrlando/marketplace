@@ -50,9 +50,8 @@
 <%= link_to "Ver todos los cursos", courses_path %>
 
 <% if user_signed_in? %>
- <% if current_user.academies.include?(@course.academy) %>
-  <%= link_to "Edit", edit_course_path(@course.id) %>
-  <%= link_to "Delete", course_path(@course.id), method: :delete, data: { confirm: "Are you sure?" } %>
- <% end %>
+  <% if current_user.academies.include?(@course.academy) %>
+    <%= link_to "Edit", edit_course_path(@course.id) %>
+    <%= link_to "Delete", course_path(@course.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
 <% end %>
-

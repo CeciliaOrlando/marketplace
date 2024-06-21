@@ -1,31 +1,42 @@
-<h1>ACADEMIES</h1>
 
 <%# cards %>
 <div class="container mt-5">
-    <div class= "row">
-
-<%= link_to 'Nueva Academia', new_academy_path %>
-
-<ul>
-  <% @academies.each do |academy| %>
-    <li>
-      <%= link_to academy.name, academy_path(academy) %>
-      <%= link_to 'Editar', edit_academy_path(academy) %>
-      <%= link_to 'Eliminar', academy_path(academy), method: :delete, data: { confirm: '¿Estás seguro?' } %>
-    </li>
-  <% end %>
-</ul>
-
-
-<% @academies.each do |academy|%>
-        <div class="col-md-4" >
-        <div class="card_transition shadow border p-3" style="background-image: url('<%= url_for(academy.photo) %>'); background-size: cover; background-position: center; linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-        <div class="content d-flex align-items-center p-3">
-            <h2 class="title"><%= academy.name %></h2>
-              <%= link_to "View Details", academy_path(academy), class: "btn btn-primary" %>
+  <div class= "row">
+    <% @academies.each do |academy|%>
+      <div class="col-4" >
+          <div class="card_transition shadow border p-3" style="background-image: url('<%= url_for(academy.photo) %>'); background-size: cover; background-position: center; linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+            <div class="content d-flex align-items-center p-3 flex-column">
+                <h2 class="title"><%= academy.name %></h2>
+                  <%= link_to "View Details", academy_path(academy), class: "btn btn-primary" %>
+            </div>
           </div>
-        </div>
       </div>
     <% end %>
+  </div>
+</div>
 
-  <%= link_to 'Añadir Nueva Academia', new_academy_path, class: "btn btn-gradient mt-5" %>
+<div class="container mt-5 mb-5">
+  <div class="row d-flex justify-content-center">
+      <% if user_signed_in? %>
+        <% if current_user.academies %>
+          <%= link_to 'Añadir Nueva Academia', new_academy_path, class: "btn btn-gradient" %>
+          <%= link_to 'Editar', edit_academy_path(@academies), class: "btn btn-gradient" %>
+          <%= link_to 'Eliminar', academy_path(@academies), method: :delete, data: { confirm: '¿Estás seguro?' }, class: "btn btn-gradient" %>
+        <%end %>
+      <% end %>
+  </div>
+</div>
+
+<%# footer %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <i class="fas fa-heart"></i> diving
+  </div>
+</div>

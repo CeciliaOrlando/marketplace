@@ -1,5 +1,7 @@
-<%= simple_form_for @academy do |f| %>
-  <%= f.input :name, label: 'Nombre' %>
-  <%= f.input :address, label: 'Dirección' %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container border shadow mt-5 w-25 p-3">
+  <%= simple_form_for @academy do |f| %>
+    <%= f.input :name, label: 'Nombre' %>
+    <%= f.input :address, label: 'Dirección' %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  <% end %>
+</div>
