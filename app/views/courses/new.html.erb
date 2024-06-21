@@ -1,8 +1,8 @@
-<h1>Añadir Nuevo Curso</h1>
-
-<%= simple_form_for @course do |f| %>
-  <%= f.input :name, label: 'Nombre' %>
-  <%= f.input :description, label: 'Descripción' %>
-  <%= f.input :price, label: 'Precio'%>
-  <%= f.button :submit %>
-<% end %>
+<div class="container border shadow mt-5 w-25 p-3">
+  <%= simple_form_for @course do |f| %>
+    <%= f.input :name, label: 'Nombre' %>
+    <%= f.input :description, label: 'Descripción' %>
+    <%= f.input :price, label: 'Precio'%>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  <% end %>
+</div>
