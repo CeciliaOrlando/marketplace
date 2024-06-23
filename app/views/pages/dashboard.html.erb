@@ -6,9 +6,7 @@
     </header>
     <ul class="nav">
      <li>
-        <a href="#">
-
-          <i class="fa-solid fa-house"></i> Mi academia</a>
+        <%= link_to '<i class="fa-solid fa-house"></i> Mi academia'.html_safe, academies_path, data: { turbo_frame: 'main' } %>
       </li>
       <li>
         <a href="#">
